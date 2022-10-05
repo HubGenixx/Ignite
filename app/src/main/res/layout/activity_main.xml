@@ -3,26 +3,108 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/blue_1">
 
-
-
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Discover"
-        android:layout_margin="5dp"
-        />
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:background="@color/blue_1"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center">
+            <android.support.v7.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="5dp"
+                app:cardUseCompatPadding="true"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Chat"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        />
+                    <ImageView
+                        android:clickable="true"
+                        android:id="@+id/uz_discover_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:src="@drawable/discover_logo1"
+                        android:layout_gravity="center"
+                        >
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/uz_discover_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Discover"
+                        android:textSize="25dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/blue_1">
+
+                    </TextView>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginLeft="5dp"
+                app:cardUseCompatPadding="true"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/uz_chat_logo"
+                        android:clickable="true"
+                        android:layout_width="150dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/chat_logo"
+                        android:layout_gravity="center"
+                        >
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/uz_chat_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Chat"
+                        android:textSize="25dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/blue_1">
+
+                    </TextView>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
 
 
 
