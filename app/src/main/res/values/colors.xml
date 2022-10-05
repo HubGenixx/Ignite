@@ -8,4 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#009900</color>
+
+<!--custom colors-->
+    <color name="blue_1">#000814</color>
+    <color name="blue_2">#001d3d</color>
+    <color name="blue_3">#003566</color>
+    <color name="yellow_1">#ffc300</color>
+    <color name="yellow_2">#ffd60a</color>
 </resources>
