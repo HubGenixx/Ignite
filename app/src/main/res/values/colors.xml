@@ -15,4 +15,10 @@
     <color name="blue_3">#003566</color>
     <color name="yellow_1">#ffc300</color>
     <color name="yellow_2">#ffd60a</color>
+
+    <color name="c1">#cad2c5</color>
+    <color name="c2">#84a98c</color>
+    <color name="c3">#52796f</color>
+    <color name="c4">#354f52</color>
+    <color name="c5">#2f3e46</color>
 </resources>
