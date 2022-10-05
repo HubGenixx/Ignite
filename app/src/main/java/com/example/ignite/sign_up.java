@@ -1,5 +1,6 @@
 package com.example.ignite;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,14 +9,14 @@ import android.widget.TextView;
 
 public class sign_up extends AppCompatActivity {
 
-    TextView signin;
+    private TextView signin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-
+        // Navigation to Login Screen
         signin = findViewById(R.id.change_to_signin);
         signin.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -19,6 +19,8 @@
     </ImageView>
 
     <EditText
+        android:textColor="@color/white"
+        android:inputType="textEmailAddress"
         android:id="@+id/edt_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,6 +35,8 @@
         android:textColorHint="@color/white" />
 
     <EditText
+        android:textColor="@color/white"
+        android:inputType="textPassword"
         android:id="@+id/edt_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,6 +51,8 @@
         android:padding="13dp" />
 
     <Button
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
         android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,6 +86,8 @@
             android:textSize="15dp"/>
 
         <TextView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             android:id="@+id/change_to_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

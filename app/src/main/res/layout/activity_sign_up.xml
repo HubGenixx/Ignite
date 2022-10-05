@@ -19,6 +19,8 @@
         android:src="@drawable/logo2" />
 
     <EditText
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
         android:id="@+id/edt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,6 +34,8 @@
         android:textColorHint="@color/white" />
 
     <EditText
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
         android:id="@+id/edt_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,6 +49,8 @@
         android:textColorHint="@color/white"
         android:padding="13dp" />
     <EditText
+        android:inputType="textPassword"
+        android:textColor="@color/white"
         android:id="@+id/edt_password"
         android:layout_width="match_parent"
         android:height="50dp"
@@ -60,6 +66,8 @@
         android:autofillHints="null"
         />
     <EditText
+        android:inputType="textVisiblePassword"
+        android:textColor="@color/white"
         android:id="@+id/edt_confirm_password"
         android:layout_width="match_parent"
         android:height="50dp"
@@ -76,6 +84,8 @@
         />
 
     <Button
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
         android:id="@+id/btn_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -108,11 +118,13 @@
             android:textSize="15dp"/>
 
         <TextView
+            android:foreground="?android:attr/selectableItemBackground"
             android:id="@+id/change_to_signin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text=" Sign in here"
+            android:paddingLeft="6dp"
+            android:text="Login"
             android:textStyle="bold"
             android:textAllCaps="false"
             android:textColor="@color/yellow_1"
