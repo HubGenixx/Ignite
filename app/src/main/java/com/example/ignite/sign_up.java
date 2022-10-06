@@ -16,6 +16,10 @@ public class sign_up extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         // Navigation to Login Screen
         signin = findViewById(R.id.change_to_signin);
         signin.setOnClickListener(new View.OnClickListener() {

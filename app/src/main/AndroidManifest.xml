@@ -14,9 +14,11 @@
         android:theme="@style/Theme.Ignite"
         tools:targetApi="31">
         <activity
-            android:name=".login"
-            android:exported="true" >
-
+            android:name=".DiscoverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,12 +26,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false"></activity>
+        <activity
             android:name=".sign_up"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

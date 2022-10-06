@@ -1,6 +1,7 @@
 package com.example.ignite;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,11 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
 
         signup = findViewById(R.id.change_to_signup);
         login = findViewById(R.id.btn_login);
