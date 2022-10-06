@@ -16,9 +16,13 @@
     <color name="yellow_1">#ffc300</color>
     <color name="yellow_2">#ffd60a</color>
 
-    <color name="c1">#cad2c5</color>
-    <color name="c2">#84a98c</color>
-    <color name="c3">#52796f</color>
-    <color name="c4">#354f52</color>
-    <color name="c5">#2f3e46</color>
+    <color name="c1">#e9ecef</color>
+    <color name="c2">#ced4da</color>
+    <color name="c3">#6c757d</color>
+    <color name="c4">#343a40</color>
+    <color name="c5">#212529</color>
+
+
+    <color name="grey">#DBD5B5</color>
+    <color name="DarkGrey">#36352F</color>
 </resources>
