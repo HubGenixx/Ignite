@@ -25,4 +25,13 @@
 
     <color name="grey">#DBD5B5</color>
     <color name="DarkGrey">#36352F</color>
+
+
+    <color name="DarkPink">#d90429</color>
+    <color name="LightPink">#ef233c</color>
+    <color name="BlueGray">#8d99ae</color>
+    <color name="DarkBlueGray">#24253c</color>
+
+
+
 </resources>
