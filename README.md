@@ -1,3 +1,4 @@
+# Ignite
 
 # Ignite
 
@@ -9,6 +10,11 @@ Tierd of keeping a track of sending notifications to your clients?You've arrived
 Ignite helps in setting intelligent 
 notification infrastructure so you can give your 
 users the experience they deserve.
+
+# Working:
+
+Ignite uses the [Courier](https://www.courier.com/) api to provide smart 
+notifications to your clients.
 
 
 # Contribution:
