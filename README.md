@@ -1,8 +1,7 @@
 
 # Ignite
 
-![App Screenshot](https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/248/243/datas/medium.png)
-
+![App Screenshot](https://github.com/adityasimant/Ignite/blob/master/ignite%20(1).png)
 
 Tierd of keeping a track of sending notifications to your clients?You've arrived exactly
  where you need to be.
