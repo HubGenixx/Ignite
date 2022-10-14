@@ -1,11 +1,20 @@
 
 # Ignite
 
-Ignite is a mobile application that helps in setting 
-up email/sms notifications.
+![App Screenshot](https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/248/243/datas/medium.png)
+
+
+Tierd of keeping a track of sending notifications to your clients?You've arrived exactly
+ where you need to be.
+Ignite helps in setting intelligent 
+notification infrastructure so you can give your 
+users the experience they deserve.
+
 
 # Contribution:
 
 Do you think you can improve our app in any means? You can 
-improve any kind of improvement, fix bugs or point out issues. 
+add any kind of value, fix bugs or point out issues. 
 Please read [contributing guide](https://github.com/adityasimant/Ignite/blob/master/contributing.md) before proceeding.
+
+
