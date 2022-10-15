@@ -33,7 +33,7 @@
     <EditText
         android:textColor="@color/white"
         android:inputType="textEmailAddress"
-        android:id="@+id/edt_email"
+        android:id="@+id/edt_email_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/app_logo"
@@ -49,7 +49,7 @@
     <EditText
         android:textColor="@color/white"
         android:inputType="textPassword"
-        android:id="@+id/edt_password"
+        android:id="@+id/edt_password_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edt_email"
@@ -65,7 +65,7 @@
     <Button
         android:foreground="?android:attr/selectableItemBackground"
         android:clickable="true"
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_login_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edt_password"

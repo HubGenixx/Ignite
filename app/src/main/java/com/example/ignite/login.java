@@ -9,14 +9,26 @@ import android.widget.QuickContactBadge;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class login extends AppCompatActivity {
 
     TextView signup;
     Button login;
-    EditText email,passwd;
+    EditText email_lgn,passwd;
+
+    FirebaseAuth auth;
+    FirebaseDatabase database;
+    FirebaseUser currentUser;
 
 
     @Override
@@ -28,12 +40,15 @@ public class login extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
+        auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+
+        currentUser = auth.getCurrentUser();
 
         signup = findViewById(R.id.change_to_signup);
-        login = findViewById(R.id.btn_login);
-        email = findViewById(R.id.edt_email);
-
-        passwd = findViewById(R.id.edt_password);
+        login = findViewById(R.id.btn_login_login);
+        email_lgn = findViewById(R.id.edt_email_login);
+        passwd = findViewById(R.id.edt_password_login);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,11 +62,40 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(login.this,MainActivity.class);
-                startActivity(intent);
+                try{
+
+                    auth.signInWithEmailAndPassword(email_lgn.getText().toString(),passwd.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+
+                            if(task.isSuccessful()){
+                                Intent intent = new Intent(login.this,MainActivity.class);
+                                startActivity(intent);
+                            }
+                        }
+                    });
+
+
+                }
+                catch (Exception e){
+                    Toast.makeText(login.this, "Error", Toast.LENGTH_SHORT).show();
+                }
+
 
             }
         });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if(currentUser != null){
+            Intent intent = new Intent(login.this,MainActivity.class);
+            startActivity(intent);
+
+        }
 
     }
 }
