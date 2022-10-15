@@ -2,12 +2,13 @@ package com.example.ignite;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import Models.ContentObject;
 import Models.InterFace.OurRetrofitClient;
@@ -92,15 +93,20 @@ public class MainActivity extends AppCompatActivity {
                if(response.body().getRequestId()==null){
                    System.out.println(response.body().getMessage());
                    System.out.println(response.body().getType());
+                   Toast.makeText(MainActivity.this, response.body().getMessage().toString(), Toast.LENGTH_SHORT).show();
+                   Toast.makeText(MainActivity.this, response.body().getType().toString(), Toast.LENGTH_SHORT).show();
                    return;
                }
                else {
                    if(response.body().getRequestId()!=null) {
                        System.out.println(response.body().getRequestId());
+                       Toast.makeText(MainActivity.this, response.body().getRequestId().toString(), Toast.LENGTH_SHORT).show();
                        return;
                    }
                    else {
                        System.out.println(response.body().getType());
+                       Toast.makeText(MainActivity.this, response.body().getType().toString(), Toast.LENGTH_SHORT).show();
+
                        return;
                    }
                }
@@ -109,8 +115,7 @@ public class MainActivity extends AppCompatActivity {
            @Override
            public void onFailure(Call<MainResponseModelClass> call, Throwable t) {
 
-               System.out.println("Failed");
-               return;
+               Toast.makeText(MainActivity.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
 
            }
        });

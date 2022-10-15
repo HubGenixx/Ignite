@@ -1,8 +1,6 @@
 package com.example.ignite;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +9,7 @@ import android.widget.QuickContactBadge;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class login extends AppCompatActivity {

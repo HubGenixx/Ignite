@@ -12,7 +12,6 @@
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
             android:src="@drawable/sgnphoto">
 
@@ -24,7 +23,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign up"
-        android:layout_marginTop="20sp"
         android:textColor="@color/white"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -59,6 +57,21 @@
         android:height="50dp"
         android:background="@drawable/edt_background"
         android:hint="Email"
+        android:textColorHint="@color/white"
+        android:padding="13dp" />
+    <EditText
+        android:inputType="phone"
+        android:textColor="@color/white"
+        android:id="@+id/edt_phno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:height="50dp"
+        android:background="@drawable/edt_background"
+        android:hint="Phone Number"
         android:textColorHint="@color/white"
         android:padding="13dp" />
     <EditText
