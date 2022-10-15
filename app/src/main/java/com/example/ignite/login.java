@@ -11,6 +11,9 @@ import android.widget.QuickContactBadge;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+
+
 public class login extends AppCompatActivity {
 
     TextView signup;
@@ -45,8 +48,6 @@ public class login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
 
                 Intent intent = new Intent(login.this,MainActivity.class);
                 startActivity(intent);
