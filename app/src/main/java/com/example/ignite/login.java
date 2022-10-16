@@ -25,7 +25,6 @@ public class login extends AppCompatActivity {
     TextView signup;
     Button login;
     EditText email_lgn,passwd;
-
     FirebaseAuth auth;
     FirebaseDatabase database;
     FirebaseUser currentUser;
@@ -39,12 +38,11 @@ public class login extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-
+        // FireBase init
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
-
         currentUser = auth.getCurrentUser();
-
+        // Id's
         signup = findViewById(R.id.change_to_signup);
         login = findViewById(R.id.btn_login_login);
         email_lgn = findViewById(R.id.edt_email_login);
@@ -61,24 +59,23 @@ public class login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 try{
-
-                    auth.signInWithEmailAndPassword(email_lgn.getText().toString(),passwd.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    auth.signInWithEmailAndPassword(
+                            email_lgn.getText().toString(),
+                            passwd.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-
                             if(task.isSuccessful()){
                                 Intent intent = new Intent(login.this,MainActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                             }
                         }
                     });
 
-
                 }
                 catch (Exception e){
-                    Toast.makeText(login.this, "Error", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login.this, "Try Again ...", Toast.LENGTH_SHORT).show();
                 }
 
 

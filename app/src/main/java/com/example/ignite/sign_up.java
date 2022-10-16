@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.database.FirebaseDatabase;
 
 import Models.User;
@@ -23,10 +24,11 @@ import Models.User;
 public class sign_up extends AppCompatActivity {
 
     private TextView signin;
-    EditText email,password, con_password,name,phn_no;
+    EditText email,password,name,phn_no;
     Button signup;
     FirebaseAuth auth;
     FirebaseDatabase database;
+
 
 
     @Override
@@ -35,17 +37,13 @@ public class sign_up extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         signup = findViewById(R.id.btn_signup);
-
-        auth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance();
-
-
         email =findViewById(R.id.edt_email);
         password =findViewById(R.id.edt_password);
         name = findViewById(R.id.edt_name);
         phn_no = findViewById(R.id.edt_phno);
 
-
+        auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
@@ -66,10 +64,6 @@ public class sign_up extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String email_str = email.getText().toString();
-                String password_str = password.getText().toString();
-
-
                     try{
                         auth.createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -84,24 +78,31 @@ public class sign_up extends AppCompatActivity {
                                     String id = task.getResult().getUser().getUid();
                                     database.getReference().child("Users").child(id).setValue(user);
 
-                                    Toast.makeText(sign_up.this, "Success", Toast.LENGTH_SHORT).show();
-
-                                    Intent intent = new Intent(sign_up.this,MainActivity.class);
+                                    Toast.makeText(sign_up.this, "Registered \n Login to continue", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(sign_up.this,login.class);
+                                    // If user Goes back to Signup fields will be empty
+                                    email.getText().clear();
+                                    password.getText().clear();
+                                    name.getText().clear();
+                                    phn_no.getText().clear();
                                     startActivity(intent);
 
                                 }
-                                else {
-                                    Toast.makeText(sign_up.this, "error", Toast.LENGTH_SHORT).show();
-
-                                    email.setText("");
-                                    password.setText("");
-                                    name.setText("");
-                                    phn_no.setText("");
-
-
+                                // User Already Exist
+                                else if(task.getException() instanceof FirebaseAuthUserCollisionException){
+                                    Toast.makeText(sign_up.this, "Email already registered \n Login",
+                                            Toast.LENGTH_LONG).show();
                                 }
 
+                                else {
+                                    Toast.makeText(sign_up.this, "Try again...", Toast.LENGTH_SHORT).show();
 
+                                    email.getText().clear();
+                                    password.getText().clear();
+                                    name.getText().clear();
+                                    phn_no.getText().clear();
+
+                                }
                             }
                         });
 
