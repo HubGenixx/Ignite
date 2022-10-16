@@ -78,17 +78,11 @@ public class sign_up extends AppCompatActivity {
                                     String id = task.getResult().getUser().getUid();
                                     database.getReference().child("Users").child(id).setValue(user);
 
-                                    Toast.makeText(sign_up.this, "Registered \n Login to continue", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(sign_up.this,login.class);
-                                    // If user Goes back to Signup fields will be empty
-                                    email.getText().clear();
-                                    password.getText().clear();
-                                    name.getText().clear();
-                                    phn_no.getText().clear();
+                                    Toast.makeText(sign_up.this, "user register", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(sign_up.this,MainActivity.class);
                                     startActivity(intent);
 
                                 }
-                                // User Already Exist
                                 else if(task.getException() instanceof FirebaseAuthUserCollisionException){
                                     Toast.makeText(sign_up.this, "Email already registered \n Login",
                                             Toast.LENGTH_LONG).show();
