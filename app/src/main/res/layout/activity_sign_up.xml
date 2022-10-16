@@ -91,23 +91,7 @@
         android:layout_marginRight="20dp"
         android:autofillHints="null"
         />
-    <EditText
-        android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:id="@+id/edt_confirm_password"
-        android:layout_width="match_parent"
-        android:height="50dp"
-        android:padding="13dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edt_password"
-        android:layout_marginTop="10dp"
-        android:hint="Confirm Password"
-        android:textColorHint="@color/white"
-        android:background="@drawable/edt_background"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:autofillHints="null"
-        />
+
 
     <Button
         android:foreground="?android:attr/selectableItemBackground"
@@ -115,7 +99,6 @@
         android:id="@+id/btn_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edt_confirm_password"
         android:width="150dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"

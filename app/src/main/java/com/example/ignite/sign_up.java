@@ -42,7 +42,6 @@ public class sign_up extends AppCompatActivity {
 
         email =findViewById(R.id.edt_email);
         password =findViewById(R.id.edt_password);
-        con_password =findViewById(R.id.edt_confirm_password);
         name = findViewById(R.id.edt_name);
         phn_no = findViewById(R.id.edt_phno);
 
@@ -93,6 +92,13 @@ public class sign_up extends AppCompatActivity {
                                 }
                                 else {
                                     Toast.makeText(sign_up.this, "error", Toast.LENGTH_SHORT).show();
+
+                                    email.setText("");
+                                    password.setText("");
+                                    name.setText("");
+                                    phn_no.setText("");
+
+
                                 }
 
 

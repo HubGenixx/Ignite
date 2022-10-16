@@ -103,6 +103,14 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:text="logout"
+        android:textStyle="bold"/>
+
 
 
 
