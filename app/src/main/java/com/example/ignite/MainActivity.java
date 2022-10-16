@@ -44,28 +44,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // FireBase
         auth = FirebaseAuth.getInstance();
+
+        //Id's
         logout = findViewById(R.id.btn_logout);
+        discover =findViewById(R.id.uz_discover_logo);
+        chat = findViewById(R.id.uz_chat_logo);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 auth.signOut();
                 Intent intent = new Intent(MainActivity.this,login.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
 
             }
         });
 
 
-
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
 
-        discover =findViewById(R.id.uz_discover_logo);
-        chat = findViewById(R.id.uz_chat_logo);
+
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 PostData();
-//                Intent intent = new Intent(MainActivity.this,DiscoverActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this,DiscoverActivity.class);
+                startActivity(intent);
             }
         });
     }
