@@ -5,6 +5,7 @@ public class MessageObjectClass {
     private ContentObject content;
     private ToObject to;
 
+
     public MessageObjectClass(RoutingObject routing, ContentObject content, ToObject to) {
         this.routing = routing;
         this.content = content;

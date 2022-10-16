@@ -96,7 +96,6 @@ public class sign_up extends AppCompatActivity {
 
                                 else {
                                     Toast.makeText(sign_up.this, "Try again...", Toast.LENGTH_SHORT).show();
-
                                     email.getText().clear();
                                     password.getText().clear();
                                     name.getText().clear();

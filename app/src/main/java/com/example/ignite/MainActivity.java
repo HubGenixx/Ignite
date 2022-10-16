@@ -49,8 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Id's
         logout = findViewById(R.id.btn_logout);
-        discover =findViewById(R.id.uz_discover_logo);
-        chat = findViewById(R.id.uz_chat_logo);
+
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,26 +67,9 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
-
-        chat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ChatActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        discover.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PostData();
-                Intent intent = new Intent(MainActivity.this,DiscoverActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
-    public void PostData(){
+    public void PostData(String email,String phone_number,String body,String title,String fullName){
 
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl("https://api.courier.com")
@@ -96,9 +78,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Giving Values
         //to
-        toObject=new ToObject("riteshsonawane1372@gmail.com","+91 9130759227");
+        toObject=new ToObject(email,"+91"+" "+phone_number);
         //Content
-        contentObject = new ContentObject("Testing Api","TestTing Api");
+        contentObject = new ContentObject("Hi"+body+"How are you"+fullName,title);
         //ChannelModes
         String []channelModes = new String[] {"sms","email"};
         //Routing
@@ -110,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Creatig the Interface
         OurRetrofitClient ourRetrofitClient = retrofit.create(OurRetrofitClient.class);
-       Call<MainResponseModelClass>res= ourRetrofitClient.getPostValue(mainObjectClass);
+        Call<MainResponseModelClass>res= ourRetrofitClient.getPostValue(mainObjectClass);
 
        res.enqueue(new Callback<MainResponseModelClass>() {
            @Override
@@ -139,7 +121,6 @@ public class MainActivity extends AppCompatActivity {
 
            @Override
            public void onFailure(Call<MainResponseModelClass> call, Throwable t) {
-
                Toast.makeText(MainActivity.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
 
            }
