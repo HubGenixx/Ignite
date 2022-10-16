@@ -6,9 +6,38 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/DarkBlueGray">
+    android:background="@color/BlueGray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/DarkBlueGray"
+        android:orientation="horizontal">
 
 
+        <TextView
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:text="Ignite"
+            android:textColor="#DFDFDF"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_background"
+        android:layout_gravity="center_vertical"
+        android:text="logout"
+        android:textColor="#EDEDED"
+        />
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -104,17 +133,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20sp"
-        android:text="logout"
-        android:textStyle="bold"/>
-
-
-
 
 
 
