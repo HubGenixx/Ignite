@@ -30,8 +30,6 @@ public class sign_up extends AppCompatActivity {
     FirebaseDatabase database;
 
 
-    // I hate java
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
