@@ -87,7 +87,6 @@ public class sign_up extends AppCompatActivity {
                                     Toast.makeText(sign_up.this, "Email already registered \n Login",
                                             Toast.LENGTH_LONG).show();
                                 }
-
                                 else {
                                     Toast.makeText(sign_up.this, "Try again...", Toast.LENGTH_SHORT).show();
                                     email.getText().clear();
