@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "269068958650",
+    "project_id": "ignite-b0c69",
+    "storage_bucket": "ignite-b0c69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269068958650:android:03f4800fd31deb5b34bb83",
+        "android_client_info": {
+          "package_name": "com.example.ignite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269068958650-ps681obbkvcum90lch0rnvjhm2qimrcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZiV-C9nlaEYkjB4Nj-_9BA6FIbyl4SW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269068958650-ps681obbkvcum90lch0rnvjhm2qimrcl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
