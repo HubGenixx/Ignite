@@ -14,9 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ignite"
         tools:targetApi="31">
-        <activity
-            android:name=".DiscoverActivity"
-            android:exported="false" />
+        <activity android:name=".Add_Customer_Activity"
+            android:exported="false"/>
 
         <activity
             android:name=".SplashActivity"
