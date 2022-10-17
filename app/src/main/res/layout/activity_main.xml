@@ -57,7 +57,6 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btn_uz_add_customer"
-            android:onClick="btn_add_customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -67,9 +66,10 @@
             android:layout_marginRight="32dp"
             android:layout_marginBottom="64dp"
             android:backgroundTint="@color/LightPink"
-            app:borderWidth="0dp"
+            android:onClick="btn_add_customer"
             android:padding="50dp"
             android:src="@drawable/ic_baseline_add_24"
+            app:borderWidth="0dp"
             app:tint="@color/white">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>

@@ -143,18 +143,6 @@
 
     </LinearLayout>
 
-    <Button
-        android:layout_width="121dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/sign_up_button_bg"
-        android:drawableLeft="@drawable/google"
-        android:drawablePadding="5dp"
-        android:padding="15dp"
-        android:text="Google"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:textStyle="bold" />
+
 
 </LinearLayout>
