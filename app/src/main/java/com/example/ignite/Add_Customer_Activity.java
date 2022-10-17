@@ -34,6 +34,10 @@ public class Add_Customer_Activity extends AppCompatActivity {
         Btn_add = findViewById(R.id.btn_add);
         Btn_cancel = findViewById(R.id.btn_cancel);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
 
     }
 
