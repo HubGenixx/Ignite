@@ -1,12 +1,9 @@
 package com.example.ignite;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,8 +24,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView discover;
-    ImageView chat;
     FirebaseAuth auth;
 
     Button logout;
@@ -51,16 +46,16 @@ public class MainActivity extends AppCompatActivity {
         logout = findViewById(R.id.btn_logout);
 
 
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                auth.signOut();
-                Intent intent = new Intent(MainActivity.this,login.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
+        logout.setOnClickListener(view -> {
+            auth.signOut();
+            Intent intent = new Intent(MainActivity.this,login.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
 
-            }
         });
+
+
+
 
 
         if (getSupportActionBar() != null) {
@@ -125,5 +120,11 @@ public class MainActivity extends AppCompatActivity {
 
            }
        });
+    }
+
+    public void btn_add_customer(View view) {
+        Intent intent = new Intent(MainActivity.this,Add_Customer_Activity.class);
+        startActivity(intent);
+
     }
 }
