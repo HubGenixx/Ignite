@@ -46,14 +46,12 @@
         android:orientation="vertical"
         android:background="@color/blue_1">
 
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/idRVItems"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            tools:listitem="@layout/customer_detail">
-
-        </androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btn_uz_add_customer"
@@ -65,12 +63,12 @@
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:layout_marginBottom="64dp"
-            android:backgroundTint="@color/LightPink"
+            android:backgroundTint="@color/white"
             android:onClick="btn_add_customer"
             android:padding="50dp"
             android:src="@drawable/ic_baseline_add_24"
             app:borderWidth="0dp"
-            app:tint="@color/white">
+           >
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
