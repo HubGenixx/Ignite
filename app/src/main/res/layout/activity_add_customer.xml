@@ -23,70 +23,80 @@
   </TextView>
 
   <EditText
-      android:inputType="textPersonName"
-      android:textColor="@color/white"
       android:id="@+id/edt_uz_name"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="20dp"
-      android:layout_marginTop="30dp"
+      android:layout_marginTop="15dp"
       android:layout_marginRight="20dp"
       android:height="50dp"
-      android:background="@color/DarkBlueGray"
+      android:background="@drawable/form_et_bg"
       android:hint="@string/name"
-      android:padding="13dp"
-      android:textColorHint="@color/BlueGray" />
-  <EditText
       android:inputType="textPersonName"
+      android:padding="13dp"
+      android:textColor="@color/white"
+      android:textColorHint="@color/BlueGray" />
+
+  <EditText
       android:id="@+id/edt_uz_phone"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="20dp"
+      android:layout_marginTop="5dp"
       android:layout_marginRight="20dp"
       android:height="50dp"
-      android:background="@color/DarkBlueGray"
+      android:background="@drawable/form_et_bg"
       android:hint="Phone Number"
+      android:inputType="textPersonName"
       android:padding="13dp"
       android:textColorHint="@color/BlueGray" />
+
   <EditText
-      android:inputType="textPersonName"
-      android:textColor="@color/white"
       android:id="@+id/edt_uz_email"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="20dp"
+      android:layout_marginTop="5dp"
       android:layout_marginRight="20dp"
       android:height="50dp"
-      android:background="@color/DarkBlueGray"
+      android:background="@drawable/form_et_bg"
       android:hint="Email"
-      android:padding="13dp"
-      android:textColorHint="@color/BlueGray" />
-  <EditText
       android:inputType="textPersonName"
+      android:padding="13dp"
       android:textColor="@color/white"
+      android:textColorHint="@color/BlueGray" />
+
+  <EditText
       android:id="@+id/edt_Uz_bill"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="20dp"
+      android:layout_marginTop="5dp"
       android:layout_marginRight="20dp"
       android:height="50dp"
-      android:background="@color/DarkBlueGray"
+      android:background="@drawable/form_et_bg"
       android:hint="Bill Amount"
-      android:padding="13dp"
-      android:textColorHint="@color/BlueGray" />
-  <EditText
       android:inputType="textPersonName"
+      android:padding="13dp"
       android:textColor="@color/white"
+      android:textColorHint="@color/BlueGray" />
+
+  <EditText
       android:id="@+id/edt_uz_remark"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="214dp"
       android:layout_marginLeft="20dp"
+      android:layout_marginTop="5dp"
       android:layout_marginRight="20dp"
       android:height="50dp"
-      android:background="@color/DarkBlueGray"
+      android:background="@drawable/form_et_bg"
+      android:gravity="start"
       android:hint="Remark"
+      android:inputType="textPersonName"
       android:padding="13dp"
+      android:textColor="@color/white"
       android:textColorHint="@color/BlueGray" />
+
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"

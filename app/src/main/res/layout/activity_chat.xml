@@ -6,13 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
 
-    <view class="android.support.v7.app.AlertController$RecycleListView"
+
+    <view class="androidx.appcompat.app.AlertController$RecycleListView"
         android:id="@+id/userRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        tools:listitem="@layout/chat_layout"
-        />
+        tools:listitem="@layout/chat_layout">
+
+    </view>
 
 </LinearLayout>
