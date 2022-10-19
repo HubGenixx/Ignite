@@ -73,8 +73,10 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()){
-                    case R.id.nav_home:
-                        Log.i("MENU_DRAWER_TAG","Home item is selected");
+                    case R.id.license:
+//                        Log.i("MENU_DRAWER_TAG","Home item is selected");
+                        Intent i = new Intent(MainActivity.this,webview.class);
+                        startActivity(i);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                     case R.id.nav_about:
