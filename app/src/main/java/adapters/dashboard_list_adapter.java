@@ -20,11 +20,12 @@ public class dashboard_list_adapter extends RecyclerView.Adapter<dashboard_list_
 
     ArrayList<dashboard_bill_model> list;
     Context context;
-
     public dashboard_list_adapter(ArrayList<dashboard_bill_model> list, Context context) {
         this.list = list;
         this.context = context;
     }
+
+
 
 
     @NonNull
@@ -64,7 +65,7 @@ public class dashboard_list_adapter extends RecyclerView.Adapter<dashboard_list_
             phonev = itemView.findViewById(R.id.idPhone);
             emailv = itemView.findViewById(R.id.idEmail);
             remarkv = itemView.findViewById(R.id.idremark);
-            billv = itemView.findViewById(R.id.idBill);
+            billv = itemView.findViewById(R.id.bill_id);
 
         }
     }

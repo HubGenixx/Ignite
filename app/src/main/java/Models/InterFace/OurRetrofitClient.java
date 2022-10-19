@@ -11,8 +11,8 @@ public interface OurRetrofitClient {
 
     @Headers({
             "Accept: application/json",
-            "Content-Type: application/json"
-            //api key here
+            "Content-Type: application/json",
+
             })
 
     @POST("/send")
