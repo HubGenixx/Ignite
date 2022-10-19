@@ -45,9 +45,10 @@
       android:layout_marginTop="5dp"
       android:layout_marginRight="20dp"
       android:height="50dp"
+      android:textColor="@color/white"
       android:background="@drawable/form_et_bg"
       android:hint="Phone Number"
-      android:inputType="textPersonName"
+      android:inputType="phone"
       android:padding="13dp"
       android:textColorHint="@color/BlueGray" />
 
@@ -61,7 +62,7 @@
       android:height="50dp"
       android:background="@drawable/form_et_bg"
       android:hint="Email"
-      android:inputType="textPersonName"
+      android:inputType="textEmailAddress"
       android:padding="13dp"
       android:textColor="@color/white"
       android:textColorHint="@color/BlueGray" />
@@ -76,7 +77,7 @@
       android:height="50dp"
       android:background="@drawable/form_et_bg"
       android:hint="Bill Amount"
-      android:inputType="textPersonName"
+      android:inputType="number"
       android:padding="13dp"
       android:textColor="@color/white"
       android:textColorHint="@color/BlueGray" />
