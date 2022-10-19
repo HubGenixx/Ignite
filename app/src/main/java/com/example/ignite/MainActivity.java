@@ -2,15 +2,23 @@ package com.example.ignite;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
@@ -37,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView dashboardview;
     ArrayList<dashboard_bill_model> dashboardList;
 
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
+    ActionBarDrawerToggle actionBarDrawerToggle;
+
 
     ToObject toObject;
     RoutingObject routingObject;
@@ -48,6 +61,48 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.navigation_view);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,R.string.menu_open,R.string.menu_close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+                    case R.id.nav_home:
+                        Log.i("MENU_DRAWER_TAG","Home item is selected");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.nav_about:
+                        Log.i("MENU_DRAWER_TAG","About item is selected");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.nav_profile:
+                        Log.i("MENU_DRAWER_TAG","Profile item is selected");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.nav_setting:
+                        Log.i("MENU_DRAWER_TAG","setting item is selected");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.btn_logout:
+                        auth.signOut();
+                        Intent intent = new Intent(MainActivity.this,login.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                }
+
+
+                return true;
+            }
+        });
+
 
 
         dashboardview = findViewById(R.id.idRVItems);
@@ -78,24 +133,15 @@ public class MainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         //Id's
-        logout = findViewById(R.id.btn_logout);
-
-
-        logout.setOnClickListener(view -> {
-            auth.signOut();
-            Intent intent = new Intent(MainActivity.this,login.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-
-        });
 
 
 
 
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
+
+        //if (getSupportActionBar() != null) {
+            //getSupportActionBar().hide();
+       // }
 
     }
 
@@ -155,6 +201,15 @@ public class MainActivity extends AppCompatActivity {
 
            }
        });
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void btn_add_customer(View view) {
@@ -162,4 +217,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
 }
