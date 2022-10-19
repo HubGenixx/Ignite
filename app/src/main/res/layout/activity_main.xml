@@ -19,14 +19,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="0dp"
         android:orientation="vertical"
-        android:background="@color/blue_1">
+        android:background="@color/BlueGray">
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/idRVItems"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="2dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btn_uz_add_customer"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="550dp"
+            android:layout_marginTop="600dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:layout_marginBottom="50dp"
