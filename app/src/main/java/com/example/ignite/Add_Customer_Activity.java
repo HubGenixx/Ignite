@@ -82,7 +82,6 @@ public class Add_Customer_Activity extends AppCompatActivity {
                             remark.setText("");
                             bill.setText("");
                             phone.setText("");
-
                         }
                     });
 
