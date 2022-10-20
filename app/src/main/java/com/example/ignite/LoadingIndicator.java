@@ -13,7 +13,7 @@ public class LoadingIndicator {
         this.activity = activity;
     }
 
-    void startLoading(){
+    public void startLoading(){
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         LayoutInflater inflater = activity.getLayoutInflater();
         builder.setView(inflater.inflate(R.layout.loading_bar,null));
@@ -23,7 +23,7 @@ public class LoadingIndicator {
         alertDialog.show();
     }
 
-    void dismissDialog(){
+    public void dismissDialog(){
         alertDialog.dismiss();
     }
 }

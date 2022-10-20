@@ -68,7 +68,7 @@
       android:textColorHint="@color/BlueGray" />
 
   <EditText
-      android:id="@+id/edt_Uz_bill"
+      android:id="@+id/nt_edt_bill"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="20dp"
@@ -83,7 +83,7 @@
       android:textColorHint="@color/BlueGray" />
 
   <EditText
-      android:id="@+id/edt_uz_remark"
+      android:id="@+id/nt_edt_remark"
       android:layout_width="match_parent"
       android:layout_height="214dp"
       android:layout_marginLeft="20dp"
@@ -117,7 +117,7 @@
 
     </Button>
     <Button
-        android:id="@+id/btn_add"
+        android:id="@+id/btn_notify"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_background"

@@ -23,74 +23,77 @@
     </TextView>
 
     <TextView
+        android:id="@+id/nt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
-        android:textSize="20sp"
         android:layout_marginRight="20dp"
         android:height="50dp"
+        android:inputType="textPersonName"
+        android:padding="13dp"
         android:text="@string/name"
-        android:inputType="textPersonName"
-        android:padding="13dp"
         android:textColor="@color/white"
-         />
+        android:textSize="20sp" />
 
     <TextView
+        android:id="@+id/nt_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
-        android:textSize="20sp"
         android:layout_marginRight="20dp"
         android:height="50dp"
+        android:inputType="textPersonName"
+        android:padding="13dp"
         android:text="@string/email"
-        android:inputType="textPersonName"
-        android:padding="13dp"
         android:textColor="@color/white"
-        />
+        android:textSize="20sp" />
 
     <TextView
+        android:id="@+id/nt_phone_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
-        android:textSize="20sp"
         android:layout_marginRight="20dp"
         android:height="50dp"
-        android:text="Bill"
         android:inputType="textPersonName"
         android:padding="13dp"
+        android:text="Phone Number"
         android:textColor="@color/white"
-        />
+        android:textSize="20sp" />
 
-    <TextView
+    <EditText
+        android:id="@+id/nt_edt_bill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:textSize="20sp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="20dp"
         android:height="50dp"
-        android:text="Phone number"
-        android:inputType="textPersonName"
+        android:background="@drawable/form_et_bg"
+        android:hint="Bill Amount"
+        android:inputType="number"
         android:padding="13dp"
         android:textColor="@color/white"
-        />
+        android:textColorHint="@color/BlueGray" />
 
-    <TextView
+    <EditText
+        android:id="@+id/nt_edt_remark"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="214dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:textSize="20sp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="20dp"
         android:height="50dp"
-        android:text="Remark"
+        android:background="@drawable/form_et_bg"
+        android:gravity="start"
+        android:hint="Remark"
         android:inputType="textPersonName"
         android:padding="13dp"
         android:textColor="@color/white"
-        />
+        android:textColorHint="@color/BlueGray" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -100,15 +103,14 @@
         android:layout_gravity="center_horizontal">
 
         <Button
-            android:id="@+id/btn_add"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_background"
-            android:text="send notification"
+            android:id="@+id/btn_notify"
+            android:layout_width="186dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="100sp"
-            android:textColor="@color/white"
-            >
+            android:background="@drawable/btn_background"
+            android:text="send notification"
+            android:textColor="@color/white">
 
         </Button>
 

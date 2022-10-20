@@ -2,20 +2,40 @@ package Models;
 
 public class AddUser {
 
-    String fullName,email,phone_number;
+    String name,email,phone_number,bill,remark;
 
-    public AddUser(String fullName, String email, String phone_number) {
-        this.fullName = fullName;
+    public AddUser(){}
+
+    public AddUser(String fullName, String email, String phone_number,String bill,String remark) {
+        this.name = fullName;
         this.email = email;
         this.phone_number = phone_number;
+        this.bill=bill;
+        this.remark=remark;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getBill() {
+        return bill;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setBill(String bill) {
+        this.bill = bill;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
