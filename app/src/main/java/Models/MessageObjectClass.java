@@ -6,11 +6,15 @@ public class MessageObjectClass {
     private ToObject to;
 
 
+
     public MessageObjectClass(RoutingObject routing, ContentObject content, ToObject to) {
         this.routing = routing;
         this.content = content;
         this.to = to;
+
     }
+
+
 
     public RoutingObject getRouting() {
         return routing;

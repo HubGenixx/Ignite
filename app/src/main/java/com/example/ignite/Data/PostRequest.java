@@ -49,7 +49,7 @@ public class PostRequest {
         toObject=new ToObject(User.getEmail(),"+91"+" "+User.getPhone_number());
         //Content
         contentObject = new ContentObject("Hi"+"\n"+
-                "How are you"+"  "+User.getName(),
+                "How are you"+"  "+User.getName()+"\n"+User.getRemark(),
                 "PAY"+User.getBill()+"\n"+
                         User.getRemark());
 
