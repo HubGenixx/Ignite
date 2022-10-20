@@ -4,15 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:backgroundTint="@color/DarkBlueGray"
-    app:cardCornerRadius="5dp"
-    android:layout_margin="5dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="3dp"
+    android:padding="10dp"
     app:cardElevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:background="@color/black"
-
+        android:padding="10dp"
         android:layout_height="wrap_content">
 
 
@@ -87,6 +88,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:layout_marginTop="3dp"
             android:background="@color/white"/>
 
         <TextView
@@ -98,6 +100,12 @@
             android:padding="9dp"
             android:text="Remark"
             android:textColor="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"/>
+
 
 
 
