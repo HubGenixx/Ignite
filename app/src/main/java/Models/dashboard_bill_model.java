@@ -17,6 +17,8 @@ public class dashboard_bill_model {
         this.bill = bill;
     }
 
+    public dashboard_bill_model(){}
+
     public dashboard_bill_model(
            String name,
            String phone,

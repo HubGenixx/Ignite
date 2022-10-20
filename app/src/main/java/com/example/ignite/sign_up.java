@@ -1,38 +1,20 @@
 package com.example.ignite;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
-import com.google.android.gms.auth.api.identity.BeginSignInRequest;
-import com.google.android.gms.auth.api.identity.SignInCredential;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.auth.api.signin.GoogleSignInResult;
-import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.FirebaseDatabase;
 
 import Models.User;
@@ -44,6 +26,7 @@ public class sign_up extends AppCompatActivity {
     Button signup;
     FirebaseAuth auth;
     FirebaseDatabase database;
+    LoadingIndicator loadingIndicator;
 
 
 
@@ -65,24 +48,6 @@ public class sign_up extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
-
-
-
-//
-//        Object signInRequest = BeginSignInRequest.builder()
-//                .setGoogleIdTokenRequestOptions(BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
-//                        .setSupported(true)
-//                        // Your server's client ID, not your Android client ID.
-//                        .setServerClientId(getString(R.string.default_web_client_id))
-//                        // Only show accounts previously used to sign in.
-//                        .setFilterByAuthorizedAccounts(true)
-//                        .build())
-//                .build();
-
-
-
-
-
         // Navigation to Login Screen
         signin = findViewById(R.id.change_to_signin);
         signin.setOnClickListener(new View.OnClickListener() {
@@ -97,12 +62,12 @@ public class sign_up extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                     try{
-                        auth.createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        auth.createUserWithEmailAndPassword(
+                                email.getText().toString(),
+                                password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-
                                 if(task.isSuccessful()){
                                     User user = new User(name.getText().toString(),
                                             email.getText().toString(),
@@ -111,18 +76,20 @@ public class sign_up extends AppCompatActivity {
                                             ) ;
                                     String id = task.getResult().getUser().getUid();
                                     database.getReference().child("Users").child(id).setValue(user);
-
                                     Toast.makeText(sign_up.this, "user register", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(sign_up.this,MainActivity.class);
                                     startActivity(intent);
 
                                 }
                                 else if(task.getException() instanceof FirebaseAuthUserCollisionException){
+
                                     Toast.makeText(sign_up.this, "Email already registered \n Login",
                                             Toast.LENGTH_LONG).show();
                                 }
                                 else {
-                                    Toast.makeText(sign_up.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+
+                                    Toast.makeText(sign_up.this,
+                                            task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                     email.getText().clear();
                                     password.getText().clear();
                                     name.getText().clear();
@@ -134,6 +101,7 @@ public class sign_up extends AppCompatActivity {
 
                     }
                     catch (Exception e){
+                        System.out.println(e);
                         Toast.makeText(sign_up.this, "some field might be empty.", Toast.LENGTH_SHORT).show();
                     }
 
