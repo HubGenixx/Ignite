@@ -110,7 +110,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/btn_background"
         android:text="Cancel"
-        android:onClick="btn_add"
         android:textColor="@color/white"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="10dp"

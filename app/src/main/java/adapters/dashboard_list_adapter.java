@@ -13,14 +13,14 @@ import com.example.ignite.R;
 
 import java.util.ArrayList;
 
-import Models.dashboard_bill_model;
+import Models.Post;
 
 public class dashboard_list_adapter extends RecyclerView.Adapter<dashboard_list_adapter.viewHolde> {
 
 
-    ArrayList<dashboard_bill_model> list;
+    ArrayList<Post> list;
     Context context;
-    public dashboard_list_adapter(ArrayList<dashboard_bill_model> list, Context context) {
+    public dashboard_list_adapter(ArrayList<Post> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -39,13 +39,20 @@ public class dashboard_list_adapter extends RecyclerView.Adapter<dashboard_list_
     @Override
     public void onBindViewHolder(@NonNull viewHolde holder, int position) {
 
-         dashboard_bill_model model = list.get(position);
+         Post model = list.get(position);
 
-         holder.namev.setText(model.getName());
-         holder.billv.setText(model.getBill());
-         holder.emailv.setText(model.getEmail());
-         holder.phonev.setText(model.getPhone());
-         holder.remarkv.setText(model.getRemark());
+//         holder.namev.setText(model.getName());
+//         holder.billv.setText(model.getBill());
+//         holder.emailv.setText(model.getEmail());
+//         holder.phonev.setText(model.getPhone());
+//         holder.remarkv.setText(model.getRemark());
+//
+//         holder.billv.setOnClickListener(new View.OnClickListener() {
+//             @Override
+//             public void onClick(View view) {
+//
+//             }
+//         });
 
     }
 
