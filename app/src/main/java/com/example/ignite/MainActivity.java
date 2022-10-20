@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -19,6 +20,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -43,11 +49,13 @@ public class MainActivity extends AppCompatActivity {
     Button logout;
     RecyclerView dashboardview;
     ArrayList<Post> dashboardList;
-
+    TextView pretext;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
+
+    FirebaseDatabase database;
 
 
     ToObject toObject;
@@ -61,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        pretext = findViewById(R.id.pre_text);
+        auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,R.string.menu_open,R.string.menu_close);
@@ -108,18 +119,14 @@ public class MainActivity extends AppCompatActivity {
 
         dashboardview = findViewById(R.id.idRVItems);
         dashboardList = new ArrayList<>();
-//        dashboardList.add(new Post("Ritesh Sonavne","2334455226","rits@gmail.com","Stonks only go up burr...",
-//                "750"));
-// dashboardList.add(new Post("Aditya Simant","2334455226","aadi@gmail.com","I hate my life lol",
-//                "169"));
-// dashboardList.add(new Post("Uzair Shah ","2334455226","Uzair@gmail.com","Step off bitch",
-//                "100"));
-// dashboardList.add(new Post("Uzair Shah ","2334455226","Uzair@gmail.com","Step off bitch",
-//                "100"));
-// dashboardList.add(new Post("Uzair Shah ","2334455226","Uzair@gmail.com","Step off bitch",
-//                "100"));
-// dashboardList.add(new Post("Uzair Shah ","2334455226","Uzair@gmail.com","Step off bitch",
-//                "100"));
+
+
+
+
+
+
+
+
 
     dashboard_list_adapter adapter = new dashboard_list_adapter(dashboardList,MainActivity.this);
     LinearLayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
@@ -127,22 +134,25 @@ public class MainActivity extends AppCompatActivity {
     dashboardview.setNestedScrollingEnabled(false);
     dashboardview.setAdapter(adapter);
 
+    database.getReference().child("posts").addValueEventListener(new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+            dashboardList.clear();
+            for(DataSnapshot datasnapshot : snapshot.getChildren()){
+                Post post = datasnapshot.getValue(Post.class);
+                dashboardList.add(post);
+                pretext.setVisibility(View.GONE);
+            }
+            adapter.notifyDataSetChanged();
 
+        }
 
-        // FireBase
-        auth = FirebaseAuth.getInstance();
-
-        //Id's
-
-
-
-
-
-
-        //if (getSupportActionBar() != null) {
-            //getSupportActionBar().hide();
-       // }
+        @Override
+        public void onCancelled(@NonNull DatabaseError error) {
+            Toast.makeText(MainActivity.this, "An error occured", Toast.LENGTH_SHORT).show();
+        }
+    });
 
     }
 

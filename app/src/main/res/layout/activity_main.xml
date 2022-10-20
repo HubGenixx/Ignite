@@ -9,48 +9,54 @@
     tools:context=".MainActivity"
     android:background="@color/BlueGray">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:orientation="vertical"
-        android:background="@color/BlueGray">
-
+        <TextView
+            android:id="@+id/pre_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:text="Your List is empty."
+            android:textColor="@color/DarkBlueGray"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/idRVItems"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="2dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btn_uz_add_customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="600dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginBottom="50dp"
             android:backgroundTint="@color/white"
             android:onClick="btn_add_customer"
             android:padding="50dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginEnd="30dp"
             android:src="@drawable/ic_baseline_add_24"
-            app:borderWidth="0dp">
+            app:borderWidth="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/idRVItems"
+            app:layout_constraintEnd_toEndOf="@+id/idRVItems"
+            app:layout_constraintHorizontal_bias="0.461"/>
 
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
-
-    </RelativeLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

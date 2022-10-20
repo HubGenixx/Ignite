@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,18 +42,18 @@ public class dashboard_list_adapter extends RecyclerView.Adapter<dashboard_list_
 
          Post model = list.get(position);
 
-//         holder.namev.setText(model.getName());
-//         holder.billv.setText(model.getBill());
-//         holder.emailv.setText(model.getEmail());
-//         holder.phonev.setText(model.getPhone());
-//         holder.remarkv.setText(model.getRemark());
-//
-//         holder.billv.setOnClickListener(new View.OnClickListener() {
-//             @Override
-//             public void onClick(View view) {
-//
-//             }
-//         });
+         holder.namev.setText(model.getName());
+         holder.billv.setText(model.getBill());
+         holder.emailv.setText(model.getEmail());
+         holder.phonev.setText(model.getPhone_number());
+         holder.remarkv.setText(model.getRemark());
+
+         holder.billv.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 Toast.makeText(context, "working", Toast.LENGTH_SHORT).show();
+             }
+         });
 
     }
 
