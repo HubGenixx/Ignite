@@ -10,21 +10,20 @@ Ignite helps in setting intelligent
 notification infrastructure so you can give your 
 users the experience they deserve.
 
-# Working
+## Working
 
 Ignite uses the [Courier](https://www.courier.com/) api to provide smart 
 notifications to your clients.
 
-# Setup
 
 
-# Contributing
+## Contributing
 
 Do you think you can improve our app in any means? You can 
 add any kind of value, fix bugs or point out issues. 
-Please read [contributing guide](https://github.com/adityasimant/Ignite/blob/master/contributing.md) before proceeding.
+Please read [contributing guide](https://github.com/adityasimant/Ignite/blob/master/contributing.md) and [code of conduct](https://github.com/IgnitePluse/Ignite/blob/master/Code_of_conduct.md) before proceeding.
 
-# License
+## License
 Ignite comes with <a href="https://choosealicense.com/licenses/mit/" > MIT LICENSE</a> 
 
 
