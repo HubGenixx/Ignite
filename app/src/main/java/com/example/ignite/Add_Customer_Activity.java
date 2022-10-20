@@ -71,10 +71,15 @@ public class Add_Customer_Activity extends AppCompatActivity {
                 AddUser(new AddUser(
                         name.getText().toString(),
                         email.getText().toString(),
-                        phone.getText().toString()), this);
+                        phone.getText().toString(),
+                        bill.getText().toString(),
+                        remark.getText().toString()
+                        ), this);
                 name.setText("");
                 email.setText("");
                 phone.setText("");
+                bill.setText("");
+                remark.setText("");
             }
             // Toast If Data is null
             else if(name.getText()==null){
