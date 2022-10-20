@@ -1,6 +1,7 @@
 package adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ignite.MainActivity;
+import com.example.ignite.NotificationActivity;
 import com.example.ignite.R;
 
 import java.util.ArrayList;
@@ -51,7 +54,10 @@ public class dashboard_list_adapter extends RecyclerView.Adapter<dashboard_list_
          holder.billv.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 Toast.makeText(context, "working", Toast.LENGTH_SHORT).show();
+                 Intent intent = new Intent(context, NotificationActivity.class);
+                 context.startActivity(intent);
+
+
              }
          });
 

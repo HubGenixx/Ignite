@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Ignite"
         tools:targetApi="31">
         <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
+        <activity
             android:name=".webview"
             android:exported="false" />
         <activity
@@ -36,7 +39,7 @@
         <activity
             android:name=".login"
             android:exported="false"
-            android:noHistory="true"></activity>
+            android:noHistory="true" />
         <activity
             android:name=".sign_up"
             android:exported="false" />
