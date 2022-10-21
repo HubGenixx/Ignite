@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,12 +14,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ignite.NotificationActivity;
 import com.example.ignite.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
 import Models.AddUser;
 
 public class dashboard_list_adapter extends RecyclerView.Adapter<dashboard_list_adapter.viewHolde> {
+
+
+    FirebaseDatabase database;
+    FirebaseUser currentUser ;
 
 
     ArrayList<AddUser> list;
@@ -50,6 +59,17 @@ public class dashboard_list_adapter extends RecyclerView.Adapter<dashboard_list_
          holder.phonev.setText(model.getPhone_number());
          holder.remarkv.setText(model.getRemark());
 
+         holder.delete.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 database = FirebaseDatabase.getInstance();
+                 currentUser =  FirebaseAuth.getInstance().getCurrentUser();
+                 database.getReference().child("posts/"+currentUser.getUid()+"/Customer/"
+                 +holder.phonev.getText().toString()).removeValue();
+
+             }
+         });
+
          holder.billv.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
@@ -74,6 +94,8 @@ public class dashboard_list_adapter extends RecyclerView.Adapter<dashboard_list_
     public class viewHolde extends RecyclerView.ViewHolder{
 
         TextView namev, phonev, emailv, remarkv, billv;
+        ImageView delete;
+
 
         public viewHolde(@NonNull View itemView) {
             super(itemView);
@@ -83,6 +105,7 @@ public class dashboard_list_adapter extends RecyclerView.Adapter<dashboard_list_
             emailv = itemView.findViewById(R.id.idEmail);
             remarkv = itemView.findViewById(R.id.idremark);
             billv = itemView.findViewById(R.id.bill_id);
+            delete = itemView.findViewById(R.id.btn_delete);
 
         }
     }
