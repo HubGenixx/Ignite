@@ -27,3 +27,7 @@ Please read [contributing guide](https://github.com/adityasimant/Ignite/blob/mas
 Ignite comes with <a href="https://choosealicense.com/licenses/mit/" > MIT LICENSE</a> 
 
 
+## Release 
+
+[Download apk](https://github.com/IgnitePluse/Ignite/releases/download/v1/app-debug.apk) 
+updated as of 10/21/2022 (For android).
