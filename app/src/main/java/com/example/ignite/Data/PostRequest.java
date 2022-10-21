@@ -80,8 +80,6 @@ public class PostRequest {
                         Toast.makeText(context,"Request Send Successfully", Toast.LENGTH_SHORT).show();
                         loadingIndicator.dismissDialog();
 
-
-
                     }
                     else {
                         System.out.println(response.body().getType());

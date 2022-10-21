@@ -7,7 +7,12 @@
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/drawable-v24/edt_background.xml" value="0.2385" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/drawable/form_et_bg.xml" value="0.2375" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2385" />
+        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.2375" />
+        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.2385" />
+        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.2385" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2385" />
+        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/drawable/ic_baseline_public_24.xml" value="0.2385" />
+        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2385" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/drawable/list_bg.xml" value="0.2375" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/drawable/sign_up_button_bg.xml" value="0.2385" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/layout/activity_add_customer.xml" value="0.23229166666666667" />
@@ -20,7 +25,7 @@
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/layout/activity_splash.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/layout/activity_webview.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/layout/chat_layout.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/layout/customer_detail.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/layout/customer_detail.xml" value="0.264" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/layout/header_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/Aditya/AndroidStudioProjects/Ignite/app/src/main/res/menu/main_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/ujair shaha/AndroidStudioProjects/Ignite/app/src/main/res/layout/activity_add_customer.xml" value="0.24375" />
