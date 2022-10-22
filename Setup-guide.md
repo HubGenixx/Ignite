@@ -26,7 +26,7 @@ Enable Sign-in with Email and password and Google Sign-in
 
 ## API Reference
 
-#### Get all items
+#### Post all items
 
 ```http
   Post /api/send
