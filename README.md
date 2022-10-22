@@ -29,7 +29,7 @@ add any kind of value, fix bugs or point out issues.
 Please read [contributing guide](https://github.com/adityasimant/Ignite/blob/master/contributing.md) and [code of conduct](https://github.com/IgnitePluse/Ignite/blob/master/Code_of_conduct.md) before proceeding.
 
 ## License
-Ignite comes with <a href="https://choosealicense.com/licenses/mit/" > MIT LICENSE</a> 
+Ignite comes with <a href=https://github.com/IgnitePluse/Ignite/blob/master/LICENSE" > MIT LICENSE</a> 
 
 
 ## Release 
