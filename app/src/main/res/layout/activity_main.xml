@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/BlueGray">
+    android:background="@color/black">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,8 +21,8 @@
             android:layout_marginTop="40dp"
             android:gravity="center_horizontal"
             android:text="Your List is empty."
-            android:textColor="@color/DarkBlueGray"
-            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textSize="30dp"
             android:textStyle="bold"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +64,8 @@
         android:id="@+id/navigation_view"
         app:headerLayout="@layout/header_menu"
         app:menu="@menu/main_menu"
+        android:background="@color/white"
+        app:itemTextColor="@color/black"
         android:fitsSystemWindows="true"
         android:layout_gravity="start"
         >
