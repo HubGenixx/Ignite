@@ -15,6 +15,11 @@ users the experience they deserve.
 Ignite uses the [Courier](https://www.courier.com/) api to provide smart 
 notifications to your clients.
 
+## Project Layout 
+
+<img src ="https://user-images.githubusercontent.com/72307121/197352983-5677a602-fc7a-4c5f-ba81-b40bc3a26b3f.png" height=550  />
+
+
 
 
 ## Contributing
