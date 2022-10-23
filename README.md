@@ -17,7 +17,7 @@ notifications to your clients.
 
 ## Project Layout 
 
-<img src ="https://user-images.githubusercontent.com/72307121/197352983-5677a602-fc7a-4c5f-ba81-b40bc3a26b3f.png" height=550  />
+<img src ="https://firebasestorage.googleapis.com/v0/b/ignite-b0c69.appspot.com/o/Screenshot%202022-10-23%20145858.png?alt=media&token=31e4733d-5631-4f59-870c-6492af550613" height=550  />
 
 
 
