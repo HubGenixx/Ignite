@@ -20,13 +20,15 @@ notifications to your clients.
 <img src ="https://firebasestorage.googleapis.com/v0/b/ignite-b0c69.appspot.com/o/Screenshot%202022-10-23%20150320.png?alt=media&token=d9adf854-ff06-4e7d-95ed-9843d172982a" height=550  />
 
 
+## SetUp guide 
+
+<a href ="https://github.com/IgnitePluse/Ignite/blob/master/Setup-guide.md">Click</a> for setup guide 
 
 
 ## Contributing
-
 Do you think you can improve our app in any means? You can 
 add any kind of value, fix bugs or point out issues. 
-Please read [contributing guide](https://github.com/adityasimant/Ignite/blob/master/contributing.md) and [code of conduct](https://github.com/IgnitePluse/Ignite/blob/master/Code_of_conduct.md) before proceeding.
+Please read [contributing guide](https://github.com/IgnitePluse/Ignite/blob/master/contributing.md) and [code of conduct](https://github.com/IgnitePluse/Ignite/blob/master/Code_of_conduct.md) before proceeding.
 
 ## License
 Ignite comes with <a href= "https://github.com/IgnitePluse/Ignite/blob/master/LICENSE" > MIT LICENSE</a> 
