@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ignite.iml" filepath="$PROJECT_DIR$/.idea/modules/Ignite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Ignite.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Ignite.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Ignite.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Ignite.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Ignite.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Ignite.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Ignite.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Ignite.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

@@ -95,30 +95,24 @@
         android:textColor="@color/white"
         android:textColorHint="@color/BlueGray" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal">
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/btn_notify"
             android:layout_width="186dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="100sp"
+            android:layout_marginTop="15sp"
             android:background="@drawable/btn_background"
             android:text="send notification"
             android:textColor="@color/white">
 
         </Button>
-
-    </LinearLayout>
-
-
-
-
+    </RelativeLayout>
 
 
 </LinearLayout>
