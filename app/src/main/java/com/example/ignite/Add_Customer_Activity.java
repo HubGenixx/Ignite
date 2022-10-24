@@ -77,6 +77,13 @@ public class Add_Customer_Activity extends AppCompatActivity {
 
         });
 
+        Btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Add_Customer_Activity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
