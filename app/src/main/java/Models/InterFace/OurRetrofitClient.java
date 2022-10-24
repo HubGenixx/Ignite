@@ -12,7 +12,7 @@ public interface OurRetrofitClient {
     @Headers({
             "Accept: application/json",
             "Content-Type: application/json",
-            "Authorization: Bearer pk_prod_R96PGPBAYY4J3EGBJPKB1NEG8MDE"
+            //Api key required Contact riteshsonawane1372@gmail.com
             })
 
     @POST("/send")
