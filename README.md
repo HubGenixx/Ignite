@@ -107,7 +107,7 @@ Ignite comes with <a href= "https://github.com/IgnitePluse/Ignite/blob/master/LI
 
 ## Release 
 
-[Download apk](https://github.com/IgnitePluse/Ignite/releases/download/v1/Ignite.apk) 
+## [Download apk](https://github.com/IgnitePluse/Ignite/releases/download/v1/Ignite.apk) 
 updated as of 10/21/2022 (For android).
 
 
