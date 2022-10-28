@@ -111,7 +111,6 @@
             android:background="@drawable/btn_background"
             android:text="Send Notification"
             android:textColor="@color/white">
-
         </Button>
 
 </LinearLayout>
