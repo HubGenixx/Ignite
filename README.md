@@ -1,8 +1,7 @@
 
 # Ignite
 
-<img src="https://firebasestorage.googleapis.com/v0/b/ignite-b0c69.appspot.com/o/Repo%20Images%2Fignite%20(1).png?alt=media&token=826db3d8-7a99-40d8-bf27-280dc1c36abf"
- height="500"
+<img src="https://firebasestorage.googleapis.com/v0/b/ignite-b0c69.appspot.com/o/Picsart_22-10-29_19-52-27-451.jpg?alt=media&token=819b5408-7971-4ce0-9aa8-fedcaa616146"
 />
 
 Tierd of keeping a track of sending notifications to your clients? You've arrived exactly where you need to be.
