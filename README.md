@@ -122,9 +122,46 @@ For support or feedback, email us at :
 ## Contributers
 
 <table>
-<tr>
-<td align="center"><a href="https://github.com/ShankarLohar"><img src="https://avatars.githubusercontent.com/u/74100292?v=4" width="100px;" alt=""/><br /><sub><b>Shankar Lohar</b></sub></td>
-</tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/adityasimant">
+      <img src="https://avatars.githubusercontent.com/u/83007985?v=4" width="100px;" alt=""/>
+      <br />
+      <sub>
+      <b>Aditya simant</b>
+      </sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/riteshsonawane1372">
+      <img src="https://avatars.githubusercontent.com/u/72307121?v=4" width="100px;" alt=""/>
+      <br />
+      <sub>
+      <b>RITESH R. SONAWANE</b>
+      </sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/UJAIR-SHAHA">
+      <img src="https://avatars.githubusercontent.com/u/107527307?v=4" width="100px;" alt=""/>
+      <br />
+      <sub>
+      <b>Ujair Shaha</b>
+      </sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/ArbazkhanPathan">
+      <img src="https://avatars.githubusercontent.com/u/74857530?v=4" width="100px;" alt=""/>
+      <br />
+      <sub>
+      <b>Arbazkhan Pathan</b>
+      </sub>
+    </td>
+  </tr>
 </table>
 
 
