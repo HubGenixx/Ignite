@@ -118,3 +118,13 @@ For support or feedback, email us at :
 - adityasimant88@gmail.com
 
 
+
+## Contributers
+
+<table>
+<tr>
+<td align="center"><a href="https://github.com/ShankarLohar"><img src="https://avatars.githubusercontent.com/u/74100292?v=4" width="100px;" alt=""/><br /><sub><b>Shankar Lohar</b></sub></td>
+</tr>
+</table>
+
+
