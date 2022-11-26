@@ -131,7 +131,6 @@ For support or feedback, email us at :
       <b>Aditya simant</b>
       </sub>
     </td>
-  
     <td align="center">
       <a href="https://github.com/riteshsonawane1372">
       <img src="https://avatars.githubusercontent.com/u/72307121?v=4" width="100px;" alt=""/>
@@ -140,7 +139,6 @@ For support or feedback, email us at :
       <b>RITESH R. SONAWANE</b>
       </sub>
     </td>
-
     <td align="center">
       <a href="https://github.com/UJAIR-SHAHA">
       <img src="https://avatars.githubusercontent.com/u/107527307?v=4" width="100px;" alt=""/>
@@ -149,7 +147,6 @@ For support or feedback, email us at :
       <b>Ujair Shaha</b>
       </sub>
     </td>
-    
     <td align="center">
       <a href="https://github.com/ArbazkhanPathan">
       <img src="https://avatars.githubusercontent.com/u/74857530?v=4" width="100px;" alt=""/>
