@@ -26,7 +26,7 @@ notifications to your clients.
 Start by cloning 
 
 ```bash
-  git clone https://github.com/IgnitePluse/Ignite.git
+  git clone https://github.com/HubGenixx/Ignite.git
 ```
 
 - Firebase 
