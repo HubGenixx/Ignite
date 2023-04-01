@@ -1,6 +1,8 @@
 
 # Ignite
 
+This project was made during [Courier Hacks: FEature Focus 2022](https://courier-hacks-feature-focus.devpost.com/) and received [Send API award](https://courier-hacks-feature-focus.devpost.com/project-gallery).
+
 <img src="https://firebasestorage.googleapis.com/v0/b/ignite-b0c69.appspot.com/o/Picsart_22-10-29_19-52-27-451.jpg?alt=media&token=819b5408-7971-4ce0-9aa8-fedcaa616146"
 />
 
